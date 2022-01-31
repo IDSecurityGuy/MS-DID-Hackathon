@@ -1,12 +1,12 @@
 # DIDoT - DID of Things
 
-![](https://avanade.sharepoint.com/:i:/r/sites/DistributedIdentityDDID/Shared%20Documents/MS%20DID%20Hackathon/Repo/doc/IdentiratiLogo.png?csf=1&web=1&e=9k9PG3)
+![](https://github.com/IDSecurityGuy/MS-DID-Hackathon/blob/main/doc/IdentiratiLogo.png?csf=1&web=1&e=9k9PG3)
 
 ## Decentralized Identity of Things. Allergen management in food shopping.
 
 This is the repository for a submission to the [Microsoft Decentralized Identity Hackathon](https://microsoft-did.devpost.com/).
 
-[Solution Demo](https://youtu.be/)
+[Solution Demo](https://www.youtube.com/watch?v=2VF7229iJ6A)
 
 [Devpost Submission](https://devpost.com/software/did-of-things-didot-allergen-management-in-food-shopping)
 
@@ -14,7 +14,7 @@ This is the repository for a submission to the [Microsoft Decentralized Identity
 
 The DIDoT Solution is the work of [Darren Robinson](https://www.linkedin.com/in/darrenjrobinson/), [Brandon Nolan](https://www.linkedin.com/in/brandonnolan/), [Elias Ekonomou](https://www.linkedin.com/in/elias-ekonomou-a124b011/), [Christian Chung-Tak-Man](https://www.linkedin.com/in/christianchung/), [Farzan Akhtar](https://www.linkedin.com/in/farzan-a-088644127/) and [Justin Botticelli](https://www.linkedin.com/in/justin-botticelli/) for the [Microsoft Decentralized Identity Hackathon](https://microsoft-did.devpost.com/).
 
-![](https://avanade.sharepoint.com/:i:/r/sites/DistributedIdentityDDID/Shared%20Documents/MS%20DID%20Hackathon/Repo/doc/AboutUs.png?csf=1&web=1&e=RZCfVC)
+![](https://github.com/IDSecurityGuy/MS-DID-Hackathon/blob/main/doc/AboutUs.png?csf=1&web=1&e=RZCfVC)
 
 ## Concept
 
@@ -24,9 +24,11 @@ For foods a VC could detail its certified ingredients and specific information p
 
 For medicines it could go further with solutions that take VCs from a patient for each of their medications and anonymously provide a drug interaction checker for the specific combination of those medications.  
 
-## Hackathon Participation Overview
+## Inspiration
 
 Our team met each day to discuss ideas for the hackathon that met the brief but that would also be interesting to build. Something that we hadn't done, but that we thought was a reference example for how decentralized identity could be used.
+
+After discussing the primary concept of  'things' having a VC, we expanded that to our own personal lives and how some of us struggle with trusting ingredients and the hopeless feeling sometimes of not being able to eat anything. Its exhausting! We used this as inspiration for our hack.
 
 After deciding on the solution we'd proceed with we fleshed out the idea and produced the narrative and wireframes before dividing up the tasks and setting up the schedule to produce the solution over the hackathon period.
 
@@ -34,7 +36,7 @@ After deciding on the solution we'd proceed with we fleshed out the idea and pro
 
 Our solution is based on the concept of 'things' having verifiable credentials as detailed in the 'Concept' above. 
 
-The [video for our submission](https://youtu.be/) illustrates a real world scenario for the estimated 32 million Americans with [food allergies](https://www.foodallergy.org/resources/facts-and-statistics#:~:text=How%20Many%20People%20Have%20Food,roughly%20two%20in%20every%20classroom.), including 5.6 million children under age 18.
+The [video for our submission](https://www.youtube.com/watch?v=2VF7229iJ6A) illustrates a real world scenario for the estimated 32 million Americans with [food allergies](https://www.foodallergy.org/resources/facts-and-statistics#:~:text=How%20Many%20People%20Have%20Food,roughly%20two%20in%20every%20classroom.), including 5.6 million children under age 18.
 
 **Each year in the U.S., 200,000 people require emergency medical care for allergic reactions to food.**
 
@@ -60,7 +62,7 @@ If foods had a verifiable credential what would the information flow look like? 
 
 This is our concept of the interaction of an Online Food Store with a Allergen Check service utilising Azure AD Verifiable Credentials.
 
-![](https://avanade.sharepoint.com/:i:/r/sites/DistributedIdentityDDID/Shared%20Documents/MS%20DID%20Hackathon/Repo/doc/DIDoT-Process-Flow.png?csf=1&web=1&e=5M4swu)
+![](https://github.com/IDSecurityGuy/MS-DID-Hackathon/blob/main/doc/DIDoT-Process-Flow.png?csf=1&web=1&e=5M4swu)
 
 # How we built it
 
@@ -70,33 +72,35 @@ The solution was built on Azure extending the [Verifiable Credentials Code Sampl
 2. [We created and issued a VC](https://docs.microsoft.com/en-us/azure/active-directory/verifiable-credentials/verifiable-credentials-configure-issuer?WT.mc_id=EM-MVP-5002871) for our Identirati Pasta Elbows product.
 3. [We configured our VC Verifier](https://docs.microsoft.com/en-us/azure/active-directory/verifiable-credentials/verifiable-credentials-configure-verifier?WT.mc_id=EM-MVP-5002871)
 
-![](https://avanade.sharepoint.com/:i:/r/sites/DistributedIdentityDDID/Shared%20Documents/MS%20DID%20Hackathon/Repo/doc/VerifierSuccess.png?csf=1&web=1&e=Xw4ELa)
+![](https://github.com/IDSecurityGuy/MS-DID-Hackathon/blob/main/doc/VerifierSuccess.png?csf=1&web=1&e=Xw4ELa)
 
 4. [We extended the sample code](https://github.com/Azure-Samples/active-directory-verifiable-credentials-dotnet?WT.mc_id=EM-MVP-5002871) to publish the ingredients and allergens of our Identirati Pasta Elbows to an endpoint for our Online Store to poll and retrieve. 
 
 The endpoint is always present but is null unless an item has just been verified. 
 
-![](https://avanade.sharepoint.com/:i:/r/sites/DistributedIdentityDDID/Shared%20Documents/MS%20DID%20Hackathon/Repo/doc/ProductIngredientsEndpoint.png?csf=1&web=1&e=6IxVWU)
+![](https://github.com/IDSecurityGuy/MS-DID-Hackathon/blob/main/doc/ProductIngredientsEndpoint.png?csf=1&web=1&e=6IxVWU)
 
 When verified the product details are published in JSON for the front end to pick up. Once the endpoint has been accessed and the details retrieved the endpoint is automatically flushed reverting to null.
 
-![](https://avanade.sharepoint.com/:i:/r/sites/DistributedIdentityDDID/Shared%20Documents/MS%20DID%20Hackathon/Repo/doc/ProductIngredientsEndpointJSON.png?csf=1&web=1&e=HqgUY3)
+![](https://github.com/IDSecurityGuy/MS-DID-Hackathon/blob/main/doc/ProductIngredientsEndpointJSON.png?csf=1&web=1&e=HqgUY3)
 
 
 # End User Online Food Store Experience
 The end user online experience is detailed in the series of screenshots below. 
 
-![](https://avanade.sharepoint.com/:i:/r/sites/DistributedIdentityDDID/Shared%20Documents/MS%20DID%20Hackathon/Repo/doc/OnlineFoodStore1.png?csf=1&web=1&e=bEhCPe)
+![](https://github.com/IDSecurityGuy/MS-DID-Hackathon/blob/main/doc/OnlineFoodStore1.png?csf=1&web=1&e=bEhCPe)
 
-![](https://avanade.sharepoint.com/:i:/r/sites/DistributedIdentityDDID/Shared%20Documents/MS%20DID%20Hackathon/Repo/doc/OnlineFoodStore2.png?csf=1&web=1&e=3ESvgO)
+![](https://github.com/IDSecurityGuy/MS-DID-Hackathon/blob/main/doc/OnlineFoodStore2.png?csf=1&web=1&e=3ESvgO)
 
-![](https://avanade.sharepoint.com/:i:/r/sites/DistributedIdentityDDID/Shared%20Documents/MS%20DID%20Hackathon/Repo/doc/OnlineFoodStore3.png?csf=1&web=1&e=9glkkK)
+![](https://github.com/IDSecurityGuy/MS-DID-Hackathon/blob/main/doc/OnlineFoodStore3.png?csf=1&web=1&e=9glkkK)
 
-![](https://avanade.sharepoint.com/:i:/r/sites/DistributedIdentityDDID/Shared%20Documents/MS%20DID%20Hackathon/Repo/doc/OnlineFoodStore4.png?csf=1&web=1&e=ecCKq0)
+![](https://github.com/IDSecurityGuy/MS-DID-Hackathon/blob/main/doc/OnlineFoodStore4.png?csf=1&web=1&e=ecCKq0)
 
 # Solution Repository
 
-This repo contains the files from our Decentralized Identity of Things allergen management in food shopping solution. 
+This repo contains the files from our Decentralized Identity of Things allergen management in food shopping solution.
+
+https://github.com/IDSecurityGuy/MS-DID-Hackathon
 
 ## Online Store (./OnlineStore)
 
