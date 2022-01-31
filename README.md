@@ -102,10 +102,4 @@ This repo contains the files from our Decentralized Identity of Things allergen 
 
 https://github.com/IDSecurityGuy/MS-DID-Hackathon
 
-## Online Store (./OnlineStore)
 
-This folder contains the JavaScript Front End for our Online Store.
-
-## VC (./VC)
-
-This folder contains the VC templates and MVC app for the verifier application
